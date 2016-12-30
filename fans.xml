@@ -1,0 +1,152 @@
+<!-- ¹Ø×¢¡¢·ÛË¿¹ÜÀí -->
+
+
+-<action name="myFanspage" class="weibo.action.PageAction" method="fans">
+
+<result name="fans">fans.jsp</result>
+
+</action>
+
+
+-<action name="showfans" class="weibo.action.FansAction">
+
+-<result name="Myfans" type="redirectAction">
+
+<param name="actionName">FansPage</param>
+
+<param name="pageNumber">1</param>
+
+<param name="namespace">/MyBlog</param>
+
+</result>
+
+</action>
+
+
+-<action name="FansPage" class="weibo.action.PageAction" method="fansLis">
+
+<result name="fans">fans.jsp</result>
+
+</action>
+
+
+-<action name="showfollow" class="weibo.action.FansAction">
+
+
+-<result name="Myfollow" type="redirectAction">
+
+<param name="actionName">myFollowpage</param>
+
+<param name="pageNumber">1</param>
+
+<param name="namespace">/MyBlog</param>
+
+</result>
+
+</action>
+
+
+-<action name="SaveAllfansId" class="weibo.action.FansAction" method="saveAllfans">
+
+
+-<result name="deleteFans" type="redirectAction">
+
+<param name="actionName">FansPage</param>
+
+<param name="pageNumber">${pageNumber}</param>
+
+<param name="listType">1</param>
+
+<param name="namespace">/MyBlog</param>
+
+</result>
+
+</action>
+
+
+-<action name="SavegroupId" class="weibo.action.FansAction" method="saveGroupId">
+
+
+-<result name="getgroupId" type="redirectAction">
+
+<param name="actionName">myFollowpage</param>
+
+<param name="pageNumber">${pageNumber}</param>
+
+<param name="listType">1</param>
+
+<param name="namespace">/MyBlog</param>
+
+</result>
+
+</action>
+
+<action name="showFansLt" class="weibo.action.PageAction" method="showFansLts"> </action>
+
+<action name="showFollowList" class="weibo.action.PageAction" method="showFollowList"> </action>
+
+
+-<action name="myFollowpage" class="weibo.action.PageAction" method="follow">
+
+<result name="follow">follow.jsp</result>
+
+</action>
+
+
+-<action name="FollowPage" class="weibo.action.PageAction" method="follow">
+
+<result name="follow">follow.jsp</result>
+
+</action>
+
+
+-<action name="addFansId" class="weibo.action.FansAction" method="addfansId">
+
+
+-<result name="homePage" type="redirectAction">
+
+<param name="actionName">Page</param>
+
+<param name="pageNumber">1</param>
+
+<param name="namespace">/</param>
+
+</result>
+
+</action>
+
+
+-<action name="deleteFansId" class="weibo.action.FansAction" method="deletefansId">
+
+
+-<result name="deleteFans" type="redirectAction">
+
+<param name="actionName">FansPage</param>
+
+<param name="pageNumber">${pageNumber}</param>
+
+<param name="listType">1</param>
+
+<param name="namespace">/MyBlog</param>
+
+</result>
+
+</action>
+
+
+-<action name="deleteFollowId" class="weibo.action.FansAction" method="deletefollowId">
+
+
+-<result name="deleteFollow" type="redirectAction">
+
+<param name="actionName">FollowPage</param>
+
+<param name="pageNumber">${pageNumber}</param>
+
+<param name="listType">1</param>
+
+<param name="namespace">/MyBlog</param>
+
+</result>
+
+</action>
